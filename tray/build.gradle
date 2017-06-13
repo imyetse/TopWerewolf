@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+apply plugin: 'jacoco'
+
+def final String VERSION_NAME = "0.11.1"
+def final int VERSION_CODE = 12
+
+android {
+    compileSdkVersion GLOBAL_COMPILE_SDK_VERSION
+    buildToolsVersion GLOBAL_BUILDTOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion GLOBAL_MIN_SDK_VERSION
+        targetSdkVersion GLOBAL_TARGET_SDK_VERSION
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+
+        resValue "string", "tray__authority", "com.example.preferences"
+
+        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            // output coverage with ./gradlew clean build createDebugCoverageReport
+            testCoverageEnabled true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    adbOptions {
+        timeOutInMs 300000
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-annotations:23.0.1'
+
+}

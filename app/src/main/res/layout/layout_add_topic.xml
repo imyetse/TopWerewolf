@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ico_back_black"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_back"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:text="话题"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_normal_l" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_ripple_transparent"
+            android:text="提交"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_normal_m" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/edit_topic_detail"
+            style="@style/editView_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:hint="说点关于这个话题的内容，不少于20字"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:textColorHint="@color/text_color_hint"
+            android:textSize="@dimen/txt_normal_m" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@color/line_gray" />
+
+        <EditText
+            android:id="@+id/edit_topic"
+            style="@style/editView_default_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="top|left"
+            android:hint="#来个悍一点的话题#"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:minLines="1"
+            android:textColorHint="@color/text_color_hint"
+            android:textSize="@dimen/txt_normal_s" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@color/line_gray" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_margin="@dimen/dp_15">
+
+            <ImageView
+                android:id="@+id/iv_add_pic"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/pic_add_avatar" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:background="@color/gray"
+                android:padding="@dimen/dp_3"
+                android:src="@drawable/login_close"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white_main" />
+
+</LinearLayout>

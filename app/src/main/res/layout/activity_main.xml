@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/blue_href"
+        android:layout_height="?android:attr/actionBarSize"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="狼人杀"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_my"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_5"
+            android:src="@mipmap/ico_main_avatar" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@+id/tabHost"
+        android:background="@drawable/line_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+    </android.support.v4.app.FragmentTabHost>
+
+</LinearLayout>

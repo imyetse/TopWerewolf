@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_200"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/view_click"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:background="@drawable/selector_ripple_translucent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_11">
+
+        <cn.tse.pr.ui.widget.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            app:civ_border_color="@color/blue_href"
+            app:civ_border_width="@dimen/dp_1" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/dp_2"
+        android:maxLines="2"
+        android:text="#U2狼人杀俱乐部#"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_normal_xl" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10">
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerVertical="true"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_corner_left_gray_50"
+            android:gravity="center"
+            android:textSize="@dimen/txt_normal_xs"
+            android:text="面杀推荐"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_6"
+            android:textColor="@color/orange_new" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toLeftOf="@id/tv_price"
+            android:layout_toRightOf="@id/view_line"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/dp_10">
+
+
+            <TextView
+                android:id="@+id/tv_item_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:drawableLeft="@mipmap/ico_find_position"
+                android:drawablePadding="@dimen/dp_5"
+                android:ellipsize="end"
+                android:lines="1"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="汕头市龙湖区丁福广场"
+                android:textColor="@color/white_80"
+                android:textSize="@dimen/txt_normal_xs" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:src="@mipmap/ico_adv" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="2"
+                    android:shadowDy="0"
+                    android:shadowRadius="1"
+                    android:text="广告"
+                    android:textColor="@color/white_80"
+                    android:textSize="@dimen/txt_normal_xs" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

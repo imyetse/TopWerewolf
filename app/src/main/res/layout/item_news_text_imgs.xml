@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector_ripple_default"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="野蛮，美联超"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_normal_m" />
+
+        <LinearLayout
+            android:id="@+id/ll_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5">
+
+            <ImageView
+                android:id="@+id/iv_center1"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/pic_light" />
+
+            <ImageView
+                android:id="@+id/iv_center2"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/pic_light" />
+
+            <ImageView
+                android:id="@+id/iv_center3"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/pic_light" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中国青年网"
+                android:textSize="@dimen/txt_normal_xxs" />
+
+            <TextView
+                android:id="@+id/tv_browse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_author"
+                android:textSize="@dimen/txt_normal_xxs" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_browse"
+                android:textSize="@dimen/txt_normal_xxs" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rl_above"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/line_gray" />
+
+</RelativeLayout>

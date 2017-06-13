@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="PullToZoomView">
+        <attr name="parallax" format="boolean" />
+        <attr name="zoom" format="boolean" />
+    </declare-styleable>
+
+    <attr name="pull_sticky_header" format="boolean" />
+    <attr name="pull_zoom_view" format="boolean" />
+
+    <attr name="tag_id" format="integer" />
+    <item name="tag_name" type="id" />
+    <item name="view_1" type="id" />
+    <item name="view_2" type="id" />
+    <item name="view_3" type="id" />
+    <item name="view_4" type="id" />
+</resources>

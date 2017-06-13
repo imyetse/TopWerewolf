@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:background="@drawable/selector_ripple_default"
+    android:paddingTop="@dimen/dp_10">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/dp_5">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="野蛮，美联超强行拖拽乘客下机 被拖乘客满嘴是血"
+            android:textSize="@dimen/txt_normal_m"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中国青年网"
+                android:textSize="@dimen/txt_normal_xxs" />
+
+            <TextView
+                android:id="@+id/tv_browse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_author"
+                android:textSize="@dimen/txt_normal_xxs" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_browse"
+                android:textSize="@dimen/txt_normal_xxs" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rl_above"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/line_gray" />
+
+</RelativeLayout>

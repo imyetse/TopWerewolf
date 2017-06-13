@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+apply plugin: 'walle'
+
+android {
+    compileSdkVersion GLOBAL_COMPILE_SDK_VERSION
+    buildToolsVersion GLOBAL_BUILDTOOLS_VERSION
+    defaultConfig {
+        applicationId "cn.tse.pr"
+        //开启multi-dexing支持
+        multiDexEnabled true
+        minSdkVersion GLOBAL_MIN_SDK_VERSION
+        targetSdkVersion GLOBAL_TARGET_SDK_VERSION
+        versionCode APP_VERSION_CODE
+        versionName APP_VERSION_NAME
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        Specifies the ABI configurations of your native libraries
+//        Gradle should build and package with your APK.
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("ww.jks")
+            storePassword "123456"
+            keyAlias "werewolf"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false//加入混淆策略
+            shrinkResources false //android studio 2.2 设置为false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            minifyEnabled false//加入混淆策略
+            shrinkResources false //android studio 2.2 设置为false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    packagingOptions {
+        exclude 'lib/armeabi-v7a/librsjni.so'
+        exclude 'lib/armeabi-v7a/libRSSupport.so'
+        exclude 'lib/mips/librsjni.so'
+        exclude 'lib/mips/libRSSupport.so'
+        exclude 'lib/x86/librsjni.so'
+        exclude 'lib/x86/libRSSupport.so'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    //android studio默认so文件加载目录为:src/main/jniLibs
+    //如在module的build.gradle按照如下方式,自定义了so文件加载目录请确保对应目录下只有armeabi目录
+    //    sourceSets {
+    //        main{
+    //            jniLibs.srcDirs = ['libs']
+    //        }
+    //    }
+
+}
+
+walle {
+    // 指定渠道包的输出路径
+    apkOutputFolder = new File("${project.buildDir}/outputs/channels");
+    // 定制渠道包的APK的文件名称 ${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk
+    apkFileNameFormat = '${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+    // 渠道配置文件
+    channelFile = new File("${project.getProjectDir()}/channel")
+}
+
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //新的打包工具 瓦力
+    compile 'com.meituan.android.walle:library:1.1.1'
+
+    //RxJava
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+    compile 'com.jcodecraeer:xrecyclerview:1.3.2'
+    compile 'com.kymjs.frame:framework:1.0.4'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+
+    compile 'com.qiniu:qiniu-android-sdk:7.2.3'
+    compile 'com.qiniu:happy-dns:0.2.7'
+
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.4'
+    compile 'com.orhanobut:dialogplus:1.11@aar'
+    //sdk
+    //compile(name: 'YoukuPlayerOpenSDK-release', ext: 'aar')
+
+    testCompile 'junit:junit:4.12'
+    compile project(':library')
+    compile project(':photoview')
+    compile project(path: ':photoview')
+}

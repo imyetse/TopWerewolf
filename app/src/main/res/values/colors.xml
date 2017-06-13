@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_white_dark">#a4a4a4</color>
+    <color name="color_white_light">#f8f8f8</color>
+
+    <color name="color_tab_text_color">#666666</color>
+    <color name="color_tab_text_clip_color">#FF488DFF</color>
+
+    <color name="orange_new">#e95b5b</color>
+    <color name="total_black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#66000000</color>
+    <color name="light_translucent">#21000000</color>
+    <color name="dark_translucent">#cc000000</color>
+    <color name="red">#f74c31</color>
+    <color name="red_like">#fb614e</color>
+    <color name="toast_black">#88000000</color>
+    <color name="txt_black">#4a4a4a</color>
+    <color name="txt_black_dark">#294956</color>
+    <color name="red_p">#b74c31</color>
+    <color name="default_main">#d5b175</color>
+    <color name="default_main_2">#daca09</color>
+    <color name="default_dark">#bd9c68</color>
+    <color name="default_light">#ead4b2</color>
+    <color name="black">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="white_50">#66ffffff</color>
+    <color name="white_80">#cdffffff</color>
+
+
+    <color name="blue_href">#488dff</color>
+    <color name="blue_href_">#41669a</color>
+    <color name="light_gray">#eeeeee</color>
+    <!--分隔线条色-->
+    <color name="light_gray_line">#ededed</color>
+    <color name="light_gray_line_dark">#979797</color>
+    <!--边界线条色-->
+    <color name="light_gray_side_line">#cccccc</color>
+    <!--主背景色-->
+    <color name="light_gray_bg">#f6f6f6</color>
+    <!--textView背景色-->
+    <color name="gray_bg">#cccccc</color>
+    <!--白色按钮点击背景色-->
+    <color name="light_gray_btn_press">#e5e5e5</color>
+    <!--白色背景的浅灰色字体色-->
+    <color name="light_gray_txt_light_bg">#b0b0b0</color>
+    <!--深色背景的浅灰字体色-->
+    <color name="light_gray_txt_dark_bg">#c7c7c7</color>
+    <!--灰色字体-->
+    <color name="gray_txt">#999999</color>
+    <!--深灰色字体-->
+    <color name="dark_gray_txt">#666666</color>
+    <!--获取验证码按钮-->
+    <color name="dark_gray_btn">#626574</color>
+    <color name="dark_gray_btn_press">#4b4d59</color>
+
+    <!--线条的颜色-->
+    <color name="line_gray">#DDDDDD</color>
+
+    <!--下单页面文字颜色-->
+    <color name="order_yellow">#D6B176</color>
+
+    <!--scanner-->
+    <color name="qr_code_white">#00FFFFFF</color>
+    <color name="qr_code_finder_mask">#80000000</color>
+    <color name="qr_code_finder_frame">#00FFFFFF</color>
+    <color name="qr_code_finder_laser">#DDDDDD</color>
+    <color name="transparent_black">#33000000</color>
+    <color name="transparent_black_p">#88000000</color>
+    <color name="invitation_gray">#BBBBBB</color>
+    <color name="shape_gray">#99e2e2e2</color>
+    <color name="bg_white_main">#fffafafa</color>
+    <color name="bg_white_main_">#f4f4f4</color>
+
+    <!--splash-->
+
+    <color name="manager_gray">#FCFCFC</color>
+
+    <color name="btn_deep_gray">#F7F7F7</color>
+    <color name="tv_invite_gray">#777777</color>
+
+    <color name="wallet_gray">#999999</color>
+
+    <!--login-->
+
+    <color name="txt_gray_lighter">#9b9b9b</color>
+    <color name="green_new">#89d2c5</color>
+    <color name="txt_hint">#a0a0a0</color>
+    <color name="green_darker_new">#53a798</color>
+    <color name="green_light_new">#b5dcd5</color>
+    <color name="green_light_new50">#6ab5dcd5</color>
+    <color name="red_guide_title">#d5433a</color>
+    <color name="invitation_line_50">#c3d5ba70</color>
+    <color name="invitation_line">#d5ba70</color>
+    <color name="invitation_yellow">#daca9f</color>
+
+    <!--invitation-->
+    <color name="invitation_blue">#55aff0</color>
+    <color name="invitation_red">#ff0000</color>
+    <color name="invitation_pink">#e50ff6</color>
+    <color name="invitation_purple">#1b7cf3</color>
+</resources>

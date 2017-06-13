@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_12">
+
+        <cn.tse.pr.ui.widget.CircleImageView
+            android:id="@+id/iv_header"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@mipmap/ico_default_my_avatar" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_toRightOf="@id/iv_header">
+
+            <RelativeLayout
+                android:id="@+id/rl_comment_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的名字是啊哈哈"
+                    android:textColor="@color/blue_href_"
+                    android:textSize="@dimen/txt_normal_s" />
+                <TextView
+                    android:id="@+id/tv_reply"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_below="@id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <cn.tse.pr.ui.widget.LikeView
+                android:id="@+id/likeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/tv_comment_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_comment_top"
+                android:layout_marginTop="@dimen/dp_10"
+                android:lineSpacingExtra="@dimen/dp_3"
+                android:text="这里是评论内容这里是评论内容这里是平路内容这里是评论内容这里是评论内容这里是平路内容这里是评论内容这里是评论内容这里是平路内容这里是评论内容这里是评论内容这里是平路内容这里是评论内容这里是评论内容这里是平路内容这里是评论内容这里是评论内容这里是平路内容"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/txt_normal_m" />
+
+            <TextView
+                android:id="@+id/tv_comment_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_comment_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="06-06 18:03 回复" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_to_input"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:background="@drawable/shape_bg_corner_gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_12">
+
+            <ImageView
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:src="@mipmap/ico_edit_slim" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="写评论.."
+                android:textSize="@dimen/txt_normal_s" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <cn.tse.pr.ui.widget.zoom.OverZoomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_to_input"
+        android:background="@color/bg_white_main">
+
+        <cn.tse.pr.ui.widget.zoom.InternalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:paddingBottom="@dimen/dp_16">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_220">
+
+                    <ImageView
+                        android:id="@+id/iv_display"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <View
+                        android:id="@+id/view_click"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/translucent" />
+
+                    <cn.tse.pr.ui.widget.CircleImageView
+                        android:id="@+id/civ_avatar"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/ico_default_avatar1" />
+
+                    <TextView
+                        android:id="@+id/tv_topic_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="@dimen/dp_15"
+                        android:paddingLeft="@dimen/dp_20"
+                        android:text="#话题#"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_normal_xxl" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_topic_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_12"
+                    android:background="@color/white"
+                    android:lineSpacingExtra="@dimen/dp_3"
+                    android:padding="@dimen/dp_12"
+                    android:text="话题"
+                    android:textSize="@dimen/txt_normal_m" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dp_12"
+                        android:paddingTop="@dimen/dp_12">
+
+                        <View
+                            android:layout_width="@dimen/dp_3"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue_href" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:text="评论"
+                            android:textSize="@dimen/txt_normal_m" />
+                    </LinearLayout>
+
+                    <cn.tse.pr.ui.widget.FullListView
+                        android:id="@+id/flv_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </cn.tse.pr.ui.widget.zoom.InternalScrollView>
+    </cn.tse.pr.ui.widget.zoom.OverZoomScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ico_close_white"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_back"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_15"
+            android:text="话题"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_normal_l" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

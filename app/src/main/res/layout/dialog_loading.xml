@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llyt_loading_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    android:paddingTop="16dp">
+    <!--<com.ghostandroid.loading.LoadingView
+        android:id="@+id/lading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"></com.ghostandroid.loading.LoadingView>-->
+    <ImageView
+        android:id="@+id/lading_view"
+        android:layout_width="75dp"
+        android:background="@drawable/timeline_anim"
+        android:layout_height="30dp"/>
+
+</RelativeLayout>

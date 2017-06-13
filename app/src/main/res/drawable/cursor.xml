@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <size android:width="1dp" />
+
+    <span style="font-family: Arial, Helvetica, sans-serif;"><!-- 光标宽度可以自己定义 --></span>
+
+    <solid android:color="#000000" /><!-- 光标颜色可以自己定义 -->
+</shape>

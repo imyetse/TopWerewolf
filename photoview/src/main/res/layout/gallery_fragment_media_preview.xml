@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.finalteam.rxgalleryfinal.ui.widget.FixViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#EF2B2C30"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <CheckBox
+            android:id="@+id/cb_check"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gallery_bucket_list_decoration_color"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:button="@drawable/gallery_checkbox_selector"
+            android:checked="true"
+            android:text="选中" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

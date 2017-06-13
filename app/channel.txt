@@ -1,0 +1,15 @@
+
+xiaomi # 小米
+meizu
+
+# 百度
+baidu
+#
+# 360
+sz360
+#
+# 应用宝
+qq
+oppo
+vivo
+wandoujia
