@@ -10,4 +10,4 @@
 - 修复bug 
 - UI调整
 
-[apk](https://github.com/Meituan-Dianping/walle/)
+[apk](https://github.com/imyetse/TopWerewolf/blob/master/apk)
