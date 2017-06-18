@@ -10,4 +10,7 @@
 - 修复bug 
 - UI调整
 
+后台用leancloud，android独立开发者推荐使用，不用搭建服务器，使用leancloud SDK，简单便捷
+数据表结构有需要的私信我
+
 [apk](https://github.com/imyetse/TopWerewolf/blob/master/apk)
